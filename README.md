@@ -10,7 +10,7 @@ sniffing the HTTP headers.
 
 Then,
 
-        ./1_get_calendar.sh XXXXX | ./2_extract_calendar.pl ./3_relative_day_collections.pl
+        ./1_get_calendar.sh XXXXX | ./2_extract_calendar.pl | ./3_relative_day_collections.pl
 
 Where XXXXX is your Universal Property Reference Number (UPRN) available from
 this webpage:
