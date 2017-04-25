@@ -12,4 +12,10 @@ Then,
 
         ./1_get_calendar.sh XXXXX | ./2_extract_calendar.pl ./3_relative_day_collections.pl
 
-Where XXXXX is your Universal Property Reference Number (UPRN)
+Where XXXXX is your Universal Property Reference Number (UPRN) available from
+this webpage:
+
+<https://www.horsham.gov.uk/bins/bin_calendars>
+
+
+
