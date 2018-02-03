@@ -21,19 +21,17 @@ while (defined(my $t = $p->get_tag("table"))) {
     my $column_offset = 0;
     my @table_row;
 
-    while (defined(my $te = $p->get_tag("tr", "/tr", "th", "td"))) {
-    my $text = $p->get_text;
+    while (defined(my $te = $p->get_tag("tr", "/tr", "th", "td", "span", "/span"))) {
+        my $text = $p->get_text;
         if($te->[0] eq "/tr") {
             push @bin_days, [@table_row] if(scalar @table_row);
             @table_row = ();
         } else {
             push @table_row, $text if($text);
         }
-        #print Dumper($te);
     }
 }
 
-#print Dumper(\@bin_days);
 foreach my $collection (@bin_days) {
     my $text_day  = $collection->[0];
     my $text_date = $collection->[1];
