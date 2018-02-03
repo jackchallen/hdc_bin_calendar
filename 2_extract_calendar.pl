@@ -37,7 +37,8 @@ foreach my $collection (@bin_days) {
     my $text_date = $collection->[1];
     my $text_bin  = $collection->[2];
     next unless($text_day and $text_date and $text_bin);
-    next if($text_day eq "DAY");
+    next if($text_date =~ "^DAY");
+    next if($text_date =~ "^New Collection Service Information");
     my ($mday, $mon_num, $year) = split "/", $text_date;
     print $text_date, " ", $text_bin, "\n";
 }
